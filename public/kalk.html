@@ -1,0 +1,64 @@
+<!-- index.html -->
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="emmValues">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+    <title>Node/Angular Tap and Get App</title>
+
+    <!-- SCROLLS -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"><!-- load bootstrap -->
+    <style>
+        html                    { overflow-y:scroll; }
+        body                    { padding-top:50px; }
+        #values-list              { margin-bottom:30px; }
+    </style>
+
+    <!-- SPELLS -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
+    <script src="core.js"></script>
+
+</head>
+<!-- SET THE CONTROLLER AND GET ALL VALUES -->
+<body ng-controller="mainController">
+    <div class="container">
+
+        <!-- HEADER AND VALUES COUNT -->
+        <div class="jumbotron text-center">
+            <h1>Tap and Get <span class="label label-info"></span></h1>
+        </div>
+
+        <!-- FORM TO CREATE VALUES -->
+        <div id="values-form" class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center">
+                <form>
+                    <div class="form-group">
+
+                        <!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
+                        <input type="number" class="form-control input-lg text-center" placeholder="Enter First number" ng-model="formData.num1" id ="num1"><br/>
+                        <input type="number" class="form-control input-lg text-center" placeholder="Enter Second number" ng-model="formData.num2" id ="num2">
+                    </div>
+
+                    <!-- createValues() WILL CREATE NEW values -->
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="add()">Add</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="createValues()">Sub</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="createValues()">Mul</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="createValues()">Div</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="createValues()">=</button>
+                      <input type="number" class="form-control input-lg text-center btn-block" placeholder="Result" ng-model="formData.result" id ="result"><br/><br/>
+<hr/>
+
+                      <p class="text-center">copyright 2016</p> <br/><br/><br/><br/>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
