@@ -43,21 +43,5 @@ function mainController($scope, $http) {
          })
         .error(function(data) {
              console.log('Error: ' + data);
-         });  };
-  // $scope.add = function(){
-    //   alert("add function");
-      //var add=document.getElementById("add").innerHTML;
-      //var sub=document.getElementById("sub").innerHTML;
-      //var mult=document.getElementById("mult").innerHTML;
-      //var div=document.getElementById("div").innerHTML;
-      //var num1=document.getElementById("num1").innerHTML;
-      //var num2=document.getElementById("num2").innerHTML;
-      //num1+num2=result;
-      //console.log(result);
-      //alert("maths function");
-      //if(num1.isEmpty()){
-      //alert("fields are empty");
-       //}
-//}
 
 }
